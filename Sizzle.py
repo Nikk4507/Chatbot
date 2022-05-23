@@ -64,6 +64,8 @@ def convertTime(seconds):
     return "%d:%02d:%02d" % (hours, minutes, seconds)
 
 if __name__ == "__main__":
+    speak("Hello!my name is sizzle")
+    speak("How can i help you sir")
     while True:
         query = takeCommand().lower()
 
@@ -79,7 +81,7 @@ if __name__ == "__main__":
             speak("yes Sir!")
 
         elif 'hello' in query:
-            speak("Hello Nikhil sir! How are your sir?")
+            speak("Hello sir! How are your sir?")
         elif "fine" in query:
             speak("Nice to hear sir!")
         elif 'thank you' in query:
@@ -96,10 +98,15 @@ if __name__ == "__main__":
             speak(f"Sir! the time is  {strTime}")
 
         elif 'play some music' in query:
-            music_dir = 'D:\\music'
-            songs = os.listdir(music_dir)
-            i = random.randint(0,15)
-            os.startfile(os.path.join(music_dir, songs[i]))
+           speak("English or bollywood song, which one?")
+        if 'english' in query:
+            while True:
+                webbrowser.open(https://wynk.in/music/playlist/weekly-top-20-english/bb_1527140401220)
+                break
+        elif 'Bollywood' in query:
+            while True:
+                webbrowser.open(https://wynk.in/music/playlist/wynk-top-100/bb_1577097670143)
+                break
 
         elif 'search something' in query:
             speak("What do you want to search? Please speak")
